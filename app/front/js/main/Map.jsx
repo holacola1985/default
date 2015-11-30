@@ -29,10 +29,21 @@ class DefaultMap extends React.Component {
 
   render() {
 
+    let min_size = 7;
     let markers = this.state.list.map((item, index) => {
+      let size = min_size + item.id;
+      let style = {
+        height: size,
+        width: size,
+        borderRadius: size,
+        left: -size/ 2,
+        top: -size / 2
+      };
+
       return <Marker key={item.id} geojson={item.geojson}>
-        <div className="marker"></div>
-        <Popup>
+        <div className="marker" style={style}></div>
+        <div className="animation"></div>
+        <Popup offset={[0, 14 - size]}>
           <div>{item.data.message}</div>
         </Popup>
       </Marker>;
