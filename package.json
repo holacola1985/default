@@ -34,6 +34,12 @@
   },
   "author": "Lightstream Team",
   "license": "MIT",
-  "keywords": ["lightstream","real time","map","dynamics","visuals","data"]
-  
+  "keywords": [
+    "lightstream",
+    "real time",
+    "map",
+    "dynamics",
+    "visuals",
+    "data"
+  ]
 }
