@@ -12,6 +12,14 @@ class DefaultMap extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.props.map.on('moveend', () => {
+      this.setState({
+        list: [],
+        id: 1
+      });
+    });
+
     this.props.socket
       .itemsAsObservable()
       .subscribe(item => {
