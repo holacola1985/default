@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Map as MapComponent, MapboxLayer, Layer, Marker, Popup } from 'mapbox-react';
+import _ from 'lodash';
 
 class DefaultMap extends React.Component {
 
@@ -21,7 +22,7 @@ class DefaultMap extends React.Component {
         }
         let key = item.id;
         this.setState({
-          list: Object.assign(this.state.list, { [key]: item })
+          list: _.assign(this.state.list, { [key]: item })
         });
       });
   }
